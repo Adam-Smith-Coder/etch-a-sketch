@@ -1,0 +1,21 @@
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+  
+  #sketchbox {
+    display: grid;
+    border: 1px solid black;
+    height: 960px;
+    width: 960px;
+    grid-gap: 0px;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  }
+  
+  .grid-item {
+    border: 1px solid #ddd;
+    height: auto;
+    width: auto;
+    padding: 5px;
+  }
