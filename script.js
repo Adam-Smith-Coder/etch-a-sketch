@@ -29,10 +29,14 @@ function colourChange (el) {
         if (document.getElementById('black').checked){
             Object.assign(el.target.style, {
             backgroundColor: 'black'
-        })
+            })
         } else if (document.getElementById('multi').checked) {
             randomColour(el);
-    }
+        } else if (document.getElementById('erase').checked) {
+            Object.assign(el.target.style, {
+                backgroundColor: 'white'
+            })
+        }
 }
 
 function randomColour(el) {
