@@ -3,20 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Etch-a-Sketch</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="interface">
-            <h1>Etch-a-Sketch</h1>
-            <button onclick="location.reload();">Reset</button>
-            <button id="sizeChange">Change Grid Size</button>
-            <p>Colour Choice:</p>
-            <input type="radio" id="black" value="black" name="colours">
-            <label for="black">Black</label>
-            <input type="radio" id="multi" value="multi" name="colours">
-            <label for="multi">Multicoloured</label>
-            <input type="radio" id="erase" value="erase" name="colours">
-            <label for="erase">Eraser</label>
+        <h1>Etch-a-Sketch</h1>
+        <div class="container">
+            <div class="interface">
+                <button onclick="location.reload();">Reset</button>
+                <button id="sizeChange">Change Grid Size</button>
+                <p>Colour Choice:</p>
+                <input type="radio" id="black" value="black" name="colours">
+                <label for="black">Black</label>
+                <input type="radio" id="multi" value="multi" name="colours">
+                <label for="multi">Multicoloured</label>
+                <input type="radio" id="erase" value="erase" name="colours">
+                <label for="erase">Eraser</label>
+            </div>
             <div id="sketchbox">
             </div>
         </div>

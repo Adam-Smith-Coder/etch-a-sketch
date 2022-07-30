@@ -4,7 +4,7 @@ const sizeBtn = document.querySelector('#sizeChange');
 window.addEventListener('load', makeRows(16, 16));
 
 sizeBtn.addEventListener('click', () => {
-    let size = prompt('Please Choose Any Grid Size Upto 100')
+    let size = prompt('Please Choose Any Grid Size Up To 100')
     if (size > 100) {
         alert('ERROR - Input Valid Number')
     } else {
