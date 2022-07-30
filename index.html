@@ -8,10 +8,10 @@
     <body>
         <div class="interface">
             <h1>Etch-a-Sketch</h1>
-            <button onclick="makeRows(16, 16);">Start</button>
-            <button onclick="makeRows(64, 64);">Smaller Grid</button>
+            <button onclick="location.reload();">Reset</button>
+            <button id="sizeChange">Change Grid Size</button>
             <p>Colour Choice:</p>
-            <input type="radio" id="black" value="black" name="colours" checked="true">
+            <input type="radio" id="black" value="black" name="colours">
             <label for="black">Black</label>
             <input type="radio" id="multi" value="multi" name="colours">
             <label for="multi">Multicoloured</label>

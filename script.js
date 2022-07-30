@@ -1,4 +1,19 @@
 const sketchbox = document.getElementById('sketchbox');
+const sizeBtn = document.querySelector('#sizeChange');
+
+window.addEventListener('load', makeRows(16, 16));
+
+sizeBtn.addEventListener('click', () => {
+    let size = prompt('Please Choose Any Grid Size Upto 100')
+    if (size > 100) {
+        alert('ERROR - Input Valid Number')
+    } else {
+        while (sketchbox.firstChild) {
+        sketchbox.removeChild(sketchbox.lastChild);
+      }
+        makeRows(size, size);
+    }
+});
 
 function makeRows(rows, cols) {
     sketchbox.style.setProperty('--grid-rows', rows);
@@ -10,23 +25,23 @@ function makeRows(rows, cols) {
   };
 };
 
-const radioButtons = document.querySelectorAll('input[name="colours"]');
-
 function colourChange (el) {
-    if (radioButtons.value = 'black') {
-        Object.assign(el.target.style, {
-            backgroundColor: black
+        if (document.getElementById('black').checked){
+            Object.assign(el.target.style, {
+            backgroundColor: 'black'
         })
-            console.log(backgroundColor)
-    } else if (radioButtons.value = 'multi') {
-        let letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-        }
-        Object.assign(el.target.style, {
-            backgroundColor: color
-        })
-        console.log(backgroundColor)
+        } else if (document.getElementById('multi').checked) {
+            randomColour(el);
     }
+}
+
+function randomColour(el) {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+    }
+    Object.assign(el.target.style, {
+            backgroundColor: color
+    })
 }
